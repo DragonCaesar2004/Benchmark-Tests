@@ -6,7 +6,7 @@ class ListCreator:
 
     def create_with_list_comprehensions(self, lenght: int) -> list[int]:
         """Создает список с элементами от 0 до числа lenght - 1 с помощью списковых включений."""
-        return [                    # noqa: C416 чтобы ruff не ругался на list comprehensions
+        return [
             i for i in range(lenght)
         ]
 
@@ -14,7 +14,7 @@ class ListCreator:
         """Создает список с элементами от 0 до числа lenght - 1 в цикле for, добавляя элементы в конец."""
         result_list = []
         for elem in range(lenght):
-            result_list.append(elem)  # noqa: PERF402 чтобы ruff не ругался на append
+            result_list.append(elem)
         return result_list
 
     def create_with_numpy(self, lenght: int) -> list[int]:
