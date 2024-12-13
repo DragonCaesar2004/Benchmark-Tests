@@ -64,4 +64,3 @@ class ListCreator:
 
         """
         return np.arange(lenght).tolist()
-

@@ -141,6 +141,12 @@ class DataConverter:
         """
         try:
             return msgpack.unpackb(input_msgpack, raw=False)
-        except (msgpack.ExtraData, msgpack.FormatError, msgpack.StackError, TypeError, ValueError) as e:
+        except (
+            msgpack.ExtraData,
+            msgpack.FormatError,
+            msgpack.StackError,
+            TypeError,
+            ValueError,
+        ) as e:
             msg = f"Ошибка десериализации msgpack в объект: {e}"
             raise ValueError(msg) from e
