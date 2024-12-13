@@ -23,4 +23,3 @@ test: ## Runs pytest with coverage
 
 benchmark:
 	pytest --benchmark-only > benchmark_results.txt
-

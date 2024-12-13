@@ -6,7 +6,7 @@ logging.getLogger().setLevel(logging.INFO)
 logger = logging.getLogger(__name__)
 
 
-def main() -> None:
+def main() -> None:  # noqa: D103
     logger.info(platform.python_version())
 
 
