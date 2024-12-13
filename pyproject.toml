@@ -9,6 +9,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.11"
 numpy = "^2.2.0"
+msgpack = "^1.1.0"
 
 
 [tool.poetry.dev-dependencies]
@@ -45,11 +46,12 @@ ignore = [
 "D100", # отсутствие докстринг в начале файла 
 "C416",  # чтобы ruff не ругался на list comprehensions
 "PERF402", # чтобы ruff не ругался на append
+"S301", # чтобы ruff не ругался на небезопасную десериализацию при помощи pickle
+
 ]
 
 [tool.ruff.per-file-ignores]
 "tests/*.py" = [
 "S101", # использование assert
-"ANN201",# j]отсутствие аннтации в тестах
-
+"ANN201",# отсутствие аннтации в тестах
 ]  
